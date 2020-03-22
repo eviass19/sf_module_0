@@ -38,7 +38,7 @@ def score_game(bsearch):
     np.random.seed(1)  # фиксируем RANDOM SEED, чтобы ваш эксперимент был воспроизводим!
     random_array = np.random.randint(1, 100, size=(1000))
     for i in random_array:
-        count_ls.append(bsearch(number,my_list,x,y))
+        count_ls.append(bsearch(number,guess,x,y))
     score = int(np.mean(count_ls))
     print(f"Ваш алгоритм угадывает число в среднем за {score} попыток")
     return(score)
