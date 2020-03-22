@@ -1,36 +1,34 @@
 import random
-import numpy as np
 
 
-def bsearch(number,guess,x,y):    
-    count=1 #counter
-    if x>y: 
+def bsearch(number,guess,x,y):
+    count=1
+    if x>y:
         return False
     else:
-        mid=(x+y)//2  #Indicating the center of the array
+        mid=(x+y)//2
         if number==mid:
             count+=1
             return mid
         elif number<mid:
-            return bsearch(number,guess,x,mid-1) # Changing the the greater border of the array
+            return bsearch(number,guess,x,mid-1)
             count+=1
         else:
-            return bsearch(number,guess,mid+1,y)  # Changing the the lower border of the array
+            return bsearch(number,guess,mid+1,y)
             count+=1
         
-guess=np.random.randint(x,y)       #Guessing the number
+my_list=random.randint(x,y)       
 x=1 
 y=100
-number=np.random.randint(1,100)   #The secret number 
+number=random.randint(1,100)
 
 
 s=bsearch(number,guess,x,y)
 
-if s!=False:
-    print('Number is', s, ' Qty of trials is', count)
-else:
+if s==False:
     print('Not relevant number')
-
+else:
+    print('Number is', s, ' Qty of trials is', count)
     
 def score_game(bsearch):
     #'''Запускаем игру 1000 раз, чтобы узнать, как быстро игра угадывает число'''
