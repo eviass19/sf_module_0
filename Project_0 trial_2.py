@@ -17,9 +17,10 @@ def bsearch(number,guess,x,y):
             return bsearch(number,guess,mid+1,y)
             count+=1
         
-my_list=random.randint(x,y)       
-x=1 
+x=1
 y=100
+my_list=random.randint(x,y)       
+
 number=random.randint(1,100)
 
 
