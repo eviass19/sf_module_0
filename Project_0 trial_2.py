@@ -2,8 +2,8 @@ import random
 
 x=1
 y=100
+count=1
 def bsearch(number,guess,x,y):
-    count=1
     if x>y:
         return False
     else:
