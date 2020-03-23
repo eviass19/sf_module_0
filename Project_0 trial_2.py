@@ -1,6 +1,7 @@
 import random
 
-
+x=1
+y=100
 def bsearch(number,guess,x,y):
     count=1
     if x>y:
@@ -17,9 +18,8 @@ def bsearch(number,guess,x,y):
             return bsearch(number,guess,mid+1,y)
             count+=1
         
-x=1
-y=100
-my_list=random.randint(x,y)       
+
+guess=random.randint(x,y)       
 
 number=random.randint(1,100)
 
